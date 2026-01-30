@@ -8,6 +8,8 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
 
+from functions.get_files_info import get_files_info
+
 def main():
     load_dotenv()
     console = Console()
@@ -54,6 +56,7 @@ def main():
             expand=False
         ))
 
+print(get_files_info("calculator", "pkg"))
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

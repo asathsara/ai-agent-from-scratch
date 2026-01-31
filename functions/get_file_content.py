@@ -14,7 +14,7 @@ def get_file_content(working_directory: str, file_path: str):
     try:
         with open(abs_file_path, "r") as f:
             file_content_str = f.read(MAX_CHARS)
-            if len(file_content_str) < MAX_CHARS:
+            if len(file_content_str) >= MAX_CHARS:
                 file_content_str += (
                     f'[...File "{file_path}" truncated to {MAX_CHARS} characters]'
             )

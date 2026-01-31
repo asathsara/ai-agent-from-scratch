@@ -1,0 +1,11 @@
+from functions.get_file_content import get_file_content
+
+def main():
+    working_dir = "calculator"
+    print(get_file_content(working_dir, "main.py"))
+    print(get_file_content(working_dir, "pkg/calculator.py"))
+    print(get_file_content(working_dir, "/bin/cat/"))
+
+if __name__ == "__main__":
+    main()
+

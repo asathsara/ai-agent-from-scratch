@@ -3,8 +3,9 @@ import os
 def get_files_info(working_directory, directory=None):
     abs_working_dir = os.path.abspath(working_directory)
     if directory is None:
-        directory = working_directory
-    abs_directory = os.path.abspath(os.path.join(working_directory, directory))
+        abs_directory = os.path.abspath(working_directory)
+    else:
+        abs_directory = os.path.abspath(os.path.join(working_directory, directory))
     if not abs_working_dir.startswith(abs_working_dir):
         return f"Error: Directory {directory} is not a directory within {working_directory}"
 
